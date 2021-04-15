@@ -1,17 +1,15 @@
 import React from "react";
-import WorldviewDemo from "./worldview-example";
+import {csv} from "d3-fetch";
 
 const App = () => {
+
+  csv("https://raw.githubusercontent.com/AlexanderHoneycutt/react-parcel-example-1/main/data/country_vaccinations%20-%20Copy.csv")
+  .then(data => console.log(data));
+
   return (
     <div>
-      <p>from App rerender</p>
-      <p> now for a worldview demo! </p>
-      <p> class on April 13 </p>
-      <p> blue </p>
+      <h1>Exploratory Data Analysis Assignment #2 Info 474, Spring 2021</h1>
 
-      <div style={{ width: "50vw", height: "50vh" }}>
-        <WorldviewDemo />
-      </div>
     </div>
   );
 };
