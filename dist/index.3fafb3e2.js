@@ -26272,28 +26272,42 @@ try {
   _parcelHelpers.defineInteropFlag(exports);
   var _react = require("react");
   var _reactDefault = _parcelHelpers.interopDefault(_react);
-  var _d3Fetch = require("d3-fetch");
-  var _jsxFileName = "C:\\Users\\17hon\\react-parcel-example-1\\src\\App.js";
+  require("d3-fetch");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _hooksUseFetch = require("./hooks/useFetch");
+  var _jsxFileName = "C:\\Users\\17hon\\react-parcel-example-1\\src\\App.js", _s = $RefreshSig$();
   const App = () => {
-    _d3Fetch.csv("https://raw.githubusercontent.com/AlexanderHoneycutt/react-parcel-example-1/main/data/country_vaccinations%20-%20Copy.csv").then(data => console.log(data));
+    _s();
+    const [data, loading] = _hooksUseFetch.useFetch("https://raw.githubusercontent.com/AlexanderHoneycutt/react-parcel-example-1/main/data/country_vaccinations%20-%20Copy.csv");
+    console.log("from hook", loading, data);
     return (
       /*#__PURE__*/_reactDefault.default.createElement("div", {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 10,
+          lineNumber: 15,
           columnNumber: 5
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11,
+          lineNumber: 16,
           columnNumber: 7
         }
-      }, "Exploratory Data Analysis Assignment #2 Info 474, Spring 2021"))
+      }, "Exploratory Data Analysis Assignment #2 Info 474, Spring 2021"), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17,
+          columnNumber: 7
+        }
+      }, loading && "Loading data!"))
     );
   };
+  _s(App, "Jm65JCcgUFoenM4DufkEA80vRVI=", false, function () {
+    return [_hooksUseFetch.useFetch];
+  });
   _c = App;
   exports.default = App;
   var _c;
@@ -26304,7 +26318,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","d3-fetch":"3eyo6"}],"5gA8y":[function(require,module,exports) {
+},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","d3-fetch":"3eyo6","./hooks/useFetch":"5YU3r"}],"5gA8y":[function(require,module,exports) {
 "use strict";
 
 exports.interopDefault = function (a) {
@@ -26768,6 +26782,41 @@ var define;
   });
 });
 
-},{}]},["1j6wU","3Imd1","5rkFb"], "5rkFb", "parcelRequiref024")
+},{}],"5YU3r":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  _parcelHelpers.export(exports, "useFetch", function () {
+    return useFetch;
+  });
+  var _d3Fetch = require("d3-fetch");
+  var _react = require("react");
+  var _s = $RefreshSig$();
+  const useFetch = url => {
+    _s();
+    const [data, setData] = _react.useState([]);
+    const [loading, setLoading] = _react.useState(true);
+    async function fetchUrl() {
+      const response = await _d3Fetch.csv(url);
+      setData(response);
+      setLoading(false);
+    }
+    _react.useEffect(() => {
+      fetchUrl();
+    }, []);
+    return [data, loading];
+  };
+  _s(useFetch, "YP7e7Smzxlgf2d3MqLcgRZjo83U=");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"d3-fetch":"3eyo6","react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}]},["1j6wU","3Imd1","5rkFb"], "5rkFb", "parcelRequiref024")
 
 //# sourceMappingURL=index.3fafb3e2.js.map
