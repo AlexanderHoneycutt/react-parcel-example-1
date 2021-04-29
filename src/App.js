@@ -50,10 +50,83 @@ const App = () => {
 
   return (
     <div>
+
       <h1>Exploratory Data Analysis, Assignment 2, INFO 474 SP 2021</h1>
       <p>{loading && "Loading data!"}</p>
 
-      <h3> Working with geo data </h3>
+      <h3>Country Map for Average Daily Vaccinations</h3>
+      <svg width="955" height="955" style={{ border: "1px solid black" }}>
+        <foreignObject width="100%" height="100%">
+          <iframe src="https://public.tableau.com/views/Assignment2-AverageDailyVacc/AverageDailyVaccinations?:language=en&:retry=yes&:display_count=y&:origin=viz_share_link:showVizHome=no&:embed=true"
+          width="955" height="955"></iframe>
+        </foreignObject>
+      </svg>
+
+
+      <h3>Average Daily Vaccinations Per Million</h3>
+      <svg width="955" height="955" style={{ border: "1px solid black" }}>
+        <foreignObject width="100%" height="100%">
+          <iframe src="https://public.tableau.com/views/Assignment2-BarChartVaccMill/BarChartVaccMill?:language=en&:retry=yes&:display_count=y&:origin=viz_share_link:showVizHome=no&:embed=true"
+          width="955" height="955"></iframe>
+        </foreignObject>
+      </svg>
+
+
+      <h3>Daily Vaccine Trend</h3>
+      <svg width="955" height="955" style={{ border: "1px solid black" }}>
+        <foreignObject width="100%" height="100%">
+          <iframe src="https://public.tableau.com/views/Assignment2-DailyVaccTrend/DailyVaccineTrend?:language=en&:retry=yes&:display_count=y&:origin=viz_share_link:showVizHome=no&:embed=true"
+          width="955" height="955"></iframe>
+        </foreignObject>
+      </svg>
+
+
+      <h3>Number of People Fully Vaccinated By Country</h3>
+      <svg width="955" height="955" style={{ border: "1px solid black" }}>
+        <foreignObject width="100%" height="100%">
+          <iframe src="https://public.tableau.com/views/Assignment2-PeopleFullyVacc/PeopleFullyVaccinated?:language=en&:display_count=y&:origin=viz_share_link:showVizHome=no&:embed=true"
+          width="955" height="955"></iframe>
+        </foreignObject>
+      </svg>
+
+
+      <h3>Trend of Fully Vaccinated People</h3>
+      <svg width="955" height="955" style={{ border: "1px solid black" }}>
+        <foreignObject width="100%" height="100%">
+          <iframe src="https://public.tableau.com/views/Assignment2-FullyVaccTrend/FullyVaccinatedTrend?:language=en&:retry=yes&:display_count=y&:origin=viz_share_link:showVizHome=no&:embed=true"
+          width="955" height="955"></iframe>
+        </foreignObject>
+      </svg>
+
+
+      <h3>Fully Vaccinated Per Hundred</h3>
+      <svg width="955" height="955" style={{ border: "1px solid black" }}>
+        <foreignObject width="100%" height="100%">
+          <iframe src="https://public.tableau.com/views/Assignment2-FullyVaccPerHundred/PeopleFullyVaccinatedPerHundred?:language=en&:display_count=y&:origin=viz_share_link:showVizHome=no&:embed=true"
+          width="955" height="955"></iframe>
+        </foreignObject>
+      </svg>
+
+
+      <h3>Total Vaccinations Given</h3>
+      <svg width="955" height="955" style={{ border: "1px solid black" }}>
+        <foreignObject width="100%" height="100%">
+          <iframe src="https://public.tableau.com/views/Assignment2-TotalVaccGiven/TotalVaccinations?:language=en&:display_count=y&:origin=viz_share_link:showVizHome=no&:embed=true"
+          width="955" height="955"></iframe>
+        </foreignObject>
+      </svg>
+
+
+      <h3>Most Commonly Used Vaccines</h3>
+      <svg width="955" height="955" style={{ border: "1px solid black" }}>
+        <foreignObject width="100%" height="100%">
+          <iframe src="https://public.tableau.com/views/Assignment2-VaccUsed/VaccinesUsed?:language=en&:display_count=y&publish=yes&:origin=viz_share_link:showVizHome=no&:embed=true"
+          width="955" height="955"></iframe>
+        </foreignObject>
+      </svg>
+      
+
+      {/* <h3> Working with geo data </h3>
       <svg width={1000} height={600} style={{ border: "1px solid black" }}>
         <path d={mapPathString} fill="rgb(200, 200, 200)" />
         {dataSmallSample.map((measurement) => {
@@ -246,7 +319,8 @@ const App = () => {
             />
           );
         })}
-      </svg>
+      </svg> */}
+
       
 
     </div>
