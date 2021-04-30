@@ -115,7 +115,7 @@ const App = () => {
       </p>
 
 
-      <h2>Question 2: Which countries have the highest number of people full vaccinated?</h2>
+      <h2>Question 2: Which countries have the highest number of people fully vaccinated?</h2>
 
       <h3>Number of People Fully Vaccinated By Country</h3>
       <svg width="955" height="955" style={{ border: "1px solid black", marginBottom: "25px" }}>
